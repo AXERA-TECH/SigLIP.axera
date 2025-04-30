@@ -1,0 +1,5 @@
+pilow
+requests
+transformers
+sentencepiece
+torch

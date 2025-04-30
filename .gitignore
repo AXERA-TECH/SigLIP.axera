@@ -1,0 +1,8 @@
+tools
+model_convert/cali_data/text_cali/*
+!model_convert/cali_data/text_cali/
+model_convert/onnx/*
+!model_convert/onnx/
+
+.vscode
+*.zip

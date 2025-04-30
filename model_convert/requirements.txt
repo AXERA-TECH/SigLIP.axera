@@ -1,0 +1,4 @@
+onnx
+onnx-simplifier
+onnxruntime
+torch
