@@ -48,7 +48,7 @@ python model_convert/onnx/export_onnx.py
 
 #### 修改配置文件
 
-修改以 config_whisper 开头的 json 文件中的所有 calibration_dataset 字段为 **准备数据集** 步骤中的 `zip` 文件路径
+修改以 `config/vision` 和 `config/text` 路径下的 json 文件中 calibration_dataset 字段为 **准备数据集** 步骤中的 `zip` 文件路径
 
 #### Pulsar2 build
 
@@ -57,14 +57,11 @@ python model_convert/onnx/export_onnx.py
 **vision encoder**
 
 ```
-pulsar2 build --config ./siglip-so400m-patch14-384_text.json --input ./siglip-so400m-patch14-384_text.onnx --output_dir /output/text/u16
+pulsar2 build --config ./siglip-so400m-patch14-384_vision.json --input ./siglip-so400m-patch14-384_vision.onnx --output_dir /output/vision/u16u8
 ```
 
 **text encoder**
-```
-# vision
-pulsar2 build --config ./siglip-so400m-patch14-384_vision.json --input ./siglip-so400m-patch14-384_vision.onnx --output_dir /output/vision/u16u8
 
-# text
+```
 pulsar2 build --config ./siglip-so400m-patch14-384_text.json --input ./siglip-so400m-patch14-384_text.onnx --output_dir /output/text/u16
 ```
